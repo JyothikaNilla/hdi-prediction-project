@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Human Development Index Prediction System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="overlay">
+
+<div class="glass-card">
+
+<h1>🌍 Human Development Index Predictor</h1>
+
+<p class="subtitle">
+Predict Human Development Index using Machine Learning
+</p>
+
+<div class="info-box">
+
+<div class="info-card">
+<h3>🤖 AI Model</h3>
+<p>Linear Regression</p>
+</div>
+
+<div class="info-card">
+<h3>📊 Dataset</h3>
+<p>Human Development Index</p>
+</div>
+
+<div class="info-card">
+<h3>⚡ Framework</h3>
+<p>Python + Flask</p>
+</div>
+
+</div>
+
+<div class="about">
+
+<h2>About This Project</h2>
+
+<p>
+The Human Development Index (HDI) is a composite statistic used to measure
+a country's overall development. It considers life expectancy, education,
+and income to estimate human development.
+Enter the required values below to predict the HDI using a trained Machine Learning model.
+</p>
+
+</div>
+
+<form action="/predict" method="POST">
+
+<div class="input-group">
+
+<label>🌱 Life Expectancy (Years)</label>
+
+<input
+type="number"
+name="life"
+step="0.1"
+min="40"
+max="90"
+placeholder="Example: 72.5"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>🎓 Mean Years of Schooling</label>
+
+<input
+type="number"
+name="mean"
+step="0.1"
+min="0"
+max="20"
+placeholder="Example: 9.5"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>📚 Expected Years of Schooling</label>
+
+<input
+type="number"
+name="expected"
+step="0.1"
+min="0"
+max="25"
+placeholder="Example: 14.2"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>💰 Gross National Income Per Capita (USD)</label>
+
+<input
+type="number"
+name="gni"
+step="1"
+min="500"
+max="100000"
+placeholder="Example: 25000"
+required>
+
+</div>
+
+<button class="predict-btn" type="submit">
+
+🚀 Predict HDI
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Human Development Index Prediction System</h3>
+
+<p>Machine Learning Project using Flask & Linear Regression</p>
+
+<p>Designed for Educational Purposes</p>
+
+</footer>
+
+</body>
+
+</html>

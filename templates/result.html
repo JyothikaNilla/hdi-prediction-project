@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="overlay">
+
+<div class="glass-card result-card">
+
+<h1>🎉 Prediction Completed</h1>
+
+<p class="subtitle">
+The Machine Learning model has successfully predicted the Human Development Index.
+</p>
+
+<div class="prediction-box">
+
+<h2>Predicted HDI</h2>
+
+<h1 class="prediction-value">{{ prediction }}</h1>
+
+<h3 style="color: {{ color }};">{{ category }}</h3>
+
+</div>
+
+<div class="details">
+
+<h2>📋 Input Details</h2>
+
+<table>
+
+<tr>
+<td>🌱 Life Expectancy</td>
+<td>{{ life }}</td>
+</tr>
+
+<tr>
+<td>🎓 Mean Years of Schooling</td>
+<td>{{ mean }}</td>
+</tr>
+
+<tr>
+<td>📚 Expected Years of Schooling</td>
+<td>{{ expected }}</td>
+</tr>
+
+<tr>
+<td>💰 GNI Per Capita</td>
+<td>{{ gni }}</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="about-result">
+
+<h2>📊 What does this mean?</h2>
+
+<p>
+The Human Development Index (HDI) is a composite measure based on
+health, education and income. A higher HDI value indicates better
+overall human development.
+</p>
+
+</div>
+
+<div class="button-group">
+
+<a href="/" class="predict-btn">
+
+🔄 Predict Again
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Human Development Index Prediction System</h3>
+
+<p>Machine Learning Project using Flask & Python</p>
+
+<p>Designed for Educational Purposes</p>
+
+</footer>
+
+</body>
+
+</html>
